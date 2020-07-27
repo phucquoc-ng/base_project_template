@@ -8,12 +8,19 @@ This template is focused on delivering a project with **static analysis** and **
 
 ## How to use 👣
 
-Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/cortinico/kotlin-android-template/generate) button to create a new repo starting from this template.
-
 Once created don't forget to update the:
 - [App ID](buildSrc/src/main/java/Coordinates.kt)
 - AndroidManifest ([here](app/src/main/AndroidManifest.xml) and [here](library-android/src/main/AndroidManifest.xml))
 - Package of the source files
+
+## For rum cmd
+- `./gradlew ktlintFormat` => will reformat the entire codebase.
+- `./gradlew detekt` => is enough to run the static analyzer on the whole codebase.
+
+- In the template you can find two Github Actions workflows:
+  pre-merge To build, test, run detekt & ktlint on all the modules of the project.
+  gradle-wrapper-validation To validate the hash of the Gradle wrapper.
+  Those workflows will run automatically for every new Pull Request and for every push.
 
 ## Features 🎨
 
